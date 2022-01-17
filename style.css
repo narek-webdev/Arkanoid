@@ -1,0 +1,68 @@
+#gameScreen {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border: 5px dashed aqua;
+}
+
+img {
+    display: none;
+}
+
+body {
+    background-image: url('./back_2.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.game {
+    position: absolute;
+    left: 0px;
+    top: -70px; 
+    letter-spacing: 4px;
+    font-size: 35px;
+    color: red;
+}
+
+.over {
+    position: absolute;
+    top: 252px;
+    left: -100px;
+    letter-spacing: 4px;
+    font-size: 35px;
+    color: red;
+}
+
+.again {
+    position: absolute;
+    left: -100px;
+    bottom: 0px;
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    outline: none;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+@-webkit-keyframes gameAnimate {
+    0% {left: 0px; top: -70px}
+    20% {left: 50px; top: 0px; transform: rotate(50deg)}
+    50% {left: 300px; top: 100px; transform: rotate(250deg)}
+    100% { left: 850px; top: 250px; transform: rotate(0deg)}
+} 
+ 
+@-webkit-keyframes overAnimate {
+    0% {left: -100px;}
+    20% {left: 50px;transform: rotate(360deg)}
+    50% {left: 300px; transform: rotate(10deg)}
+    100% { left: 967px; transform: rotate(0deg)}
+}
+
+@-webkit-keyframes againAnimate {
+    0% {left: 0px; bottom: 0px}
+    20% {left: 295px; bottom: 50px; letter-spacing: 6px}
+    50% {left: 650px; bottom: 150px; letter-spacing: 14px}
+    100% {left: 915px; bottom: 610px} 
+} 
