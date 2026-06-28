@@ -96,7 +96,6 @@ class Paddle {
 }
 
 class InputHandeler {
-
     constructor (paddle, game) {
         document.addEventListener('keydown', (event) => {
 
@@ -119,13 +118,10 @@ class InputHandeler {
             } 
 
         });
-        
     }
-
 }
 
 class Ball {
-
     constructor (game) {
         this.image = document.getElementById('img_ball');
     
@@ -147,7 +143,6 @@ class Ball {
     }
 
     update () {
-        
         this.position.x += this.speed.x;
         this.position.y += this.speed.y;
 
@@ -171,13 +166,10 @@ class Ball {
             document.getElementsByClassName('over')[0].style.animation = "overAnimate 4s forwards";
             document.getElementsByClassName('game')[0].style.animation = "gameAnimate 4s forwards";
         }
-
     }
-
 }
 
 class Brick {
-
     constructor (game, position) {
         this.image = document.getElementById('img_brick');
     
@@ -202,7 +194,6 @@ class Brick {
     draw (ctx) {
         ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
     }
-
 }
 
 const level1 = [
@@ -228,11 +219,9 @@ function buildLevel (game, level) {
     })
 
     return bricks;
-
 }
 
 function detectCollision (ball, gameObject) {
- 
     let bottomOfBall = ball.position.y + ball.size;
     let topOfBall = ball.position.y;
     
@@ -250,7 +239,6 @@ function detectCollision (ball, gameObject) {
     } else {
         return false;
     }
-    
 }
 
 let canvas = document.getElementById('gameScreen');
@@ -274,7 +262,6 @@ function gameLoop (timestamp) {
     game.draw(ctx);
     
     requestAnimationFrame(gameLoop);
-
 }
 
 requestAnimationFrame(gameLoop);
